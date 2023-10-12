@@ -31,3 +31,5 @@ celerybeat-schedule.db
 htmlcov/
 .coverage
 .coverage.*
+
+db.sqlite3
