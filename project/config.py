@@ -33,7 +33,7 @@ class DevelopmentConfig(BaseConfig):
     """
     Override some settings for development.
     """
-    CELERY_TASK_ALWAYS_EAGER: bool = True
+    # CELERY_TASK_ALWAYS_EAGER: bool = True
 
 
 class ProductionConfig(BaseConfig):
