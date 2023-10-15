@@ -30,8 +30,14 @@ class BaseConfig:
         "WS_MESSAGE_QUEUE", "redis://127.0.0.1:6379/0"
     )
 
-    # Set to True to execute tasks synchronously for testing.
-    CELERY_TASK_ALWAYS_EAGER: bool = False  # <- Set to False for production
+    CELERY_TASK_ALWAYS_EAGER: bool = False
+
+    CELERY_BEAT_SCHEDULE: dict = {
+        # "task-schedule-work": {
+        #     "task": "task_schedule_work",
+        #     "schedule": 5.0,  # five seconds
+        # },
+    }
 
 
 class DevelopmentConfig(BaseConfig):
